@@ -1,130 +1,147 @@
-# RISK CHESS
+# Risk Chess: Dynasties of Bharat
 
-> **"Risk Chess uses fictional resource units for strategic planning only."**  
-> *A corporate strategy chess game about resource allocation, tactical execution, and decision quality.*
-
----
-
-## 1. Why Risk Chess?
-
-Traditional chess has always been a game of perfect information and absolute outcomes: you either win, draw, or lose, and material is evaluated in static point values (1, 3, 3, 5, 9). 
-
-In modern organizations, decisions are rarely deterministic. They are defined by **uncertainty, resource limits, expected value, operational exposure, and probabilistic risk management**.
-
-**Risk Chess** transforms these abstract strategic concepts into an interactive boardroom simulation. Every piece carries an internal resource value; every tactical engagement forces the player to assess defender-to-attacker ratios, counter-attack threats, and piece survival odds. Players don't just calculate moves; they manage a fictional operating budget, deciding when to approve resources for a tactical plan and when to preserve reserves.
-
-There is **no real money, no deposits, no wagering, no loot boxes, and no pay-to-win mechanics**. It is an educational corporate strategy simulation designed for players who want to sharpen judgment under uncertainty.
+> **SIH26208** — A unique toy/game inspired by Indian civilisation.  
+> *A royal strategy simulation where every conquest shapes your treasury — built on the principles of Chanakya's Arthashastra.*
 
 ---
 
-## 2. Core Game Concept
+## 1. What Is This?
 
-### Starting Resources
-Both players begin with **10,000 RU** in fictional resource units.
+**Dynasties of Bharat** is a cultural strategy chess game submitted for **Smart India Hackathon 2026 (Problem Statement SIH26208)**: *develop/conceptualize a unique toy or game inspired by Indian civilisation.*
 
-### Piece Valuations
-| Piece | Resource Value | Strategic Role |
+Traditional chess is already India's gift to the world — born as *Chaturanga* in the Gupta Empire. This game takes that heritage and layers a **resource-planning and risk-management simulation** on top, drawing inspiration from:
+
+- **Chanakya's Arthashastra** — the ancient Indian treatise on statecraft, economic policy, and military strategy
+- **The Maurya Empire's Mansabdari system** — where generals were ranked by the cavalry (resources) they could field
+- **The Silk Road trade networks** — where every tactical decision had an economic consequence
+
+Every piece capture forces the player to assess **battle survival probability**, **enemy counter-strike threat**, and **treasury impact** — turning chess into a simulation of royal decision-making under uncertainty.
+
+There is **no real money, no wagering, no loot boxes, and no pay-to-win mechanics.** Treasury Reserves (TR) are entirely fictional planning values for an educational simulation.
+
+---
+
+## 2. Sena Parichaya — The Royal Forces
+
+Both players begin with **10,000 TR** (Treasury Reserves).
+
+| Piece (Bharat) | Piece (Standard) | Treasury Value | Role |
+|---|---|---|---|
+| **Maharaja** | King | *Priceless* | The throne — his fall ends the realm |
+| **Rajmata** | Queen | **3,000 TR** | Supreme battlefield authority |
+| **Durg** | Rook | **1,500 TR** | Fortress — anchor of position |
+| **Acharya** | Bishop | **1,000 TR** | Sage advisor — diagonal wisdom |
+| **Ashva** | Knight | **1,000 TR** | Warhorse — unconventional strikes |
+| **Padati** | Pawn | **500 TR** | Infantry — backbone of every campaign |
+
+---
+
+## 3. Rajniti Nirnay — The Decision Cycle
+
+When you execute a tactically meaningful strike, a **Strategic Decision Review** opens:
+
+1. **The Situation:** e.g. *Ashva (Knight) seizes Acharya (Bishop) at f7*
+2. **The Intelligence:**
+   - Captured Territory Value: 1,000 TR
+   - Battle Survival Probability: 68%
+   - Enemy Counter-Strike: Medium
+   - Statistical Expected Impact: +180 TR
+3. **The Choice:** Sanction a treasury allocation (**100, 250, 500, or 1,000 TR**) or **Hold Campaign**
+4. **The Resolution:**
+   - If your piece survives the sequence, the campaign generates **treasury gain**
+   - If your piece is captured, committed reserves are **written down**
+
+### Campaign Scenarios
+
+Choose your historical campaign context at setup:
+
+| Scenario | Theme | Effect |
 |---|---|---|
-| **King** | *Priceless* | Sovereign asset; cannot be liquidated |
-| **Queen** | **3,000 RU** | High-impact executive asset |
-| **Rook** | **1,500 RU** | Long-range operational asset |
-| **Bishop** | **1,000 RU** | Specialist diagonal asset |
-| **Knight** | **1,000 RU** | Agile tactical asset |
-| **Pawn** | **500 RU** | Baseline field resource |
-
-### The Core Tactical Twist: Resource Decisions
-Whenever a player initiates a tactically meaningful move, a **Decision Review** prompt appears:
-1. **The Context:** e.g. *Knight attacks Queen on f7*.
-2. **The Metrics:**
-   - Asset Value: 3,000 RU
-   - Survival Probability: 68%
-   - Opponent Threat Level: Medium
-   - Projected Impact: +420 RU
-3. **The Decision:** The player can approve a resource commitment (**100, 250, 500, or 1,000 RU**) or choose to **Defer**.
-4. **The Resolution:** 
-   - If the piece survives the tactical sequence over subsequent moves, the assignment creates positive operational impact.
-   - If the piece is captured, committed resources are written down.
-
-### Match Winner & Executive Settlement
-The match winner is always decided by the chess result: checkmate, resignation, stalemate, or draw. Resource units do **not** override the board winner.
-
-If the board winner finishes with fewer resource units than the loser, a post-match executive settlement is applied: the winner receives **50% of the loser's earned surplus RU**. Earned surplus is calculated from the loser’s final resource position above the starting resource pool.
+| **The Grand Trade Route** | Silk & Spice commerce | High-value captures reward tactical boldness |
+| **The Monsoon** | Season of uncertainty | Risk profiles shift with volatile conditions |
+| **The Centre of Knowledge** | Nalanda Principles | Defensive mastery builds steady treasury yield |
 
 ---
 
-## 3. Game Modes
+## 4. Yuddha Modes — Game Modes
 
-- **Classic vs AI:** Battle an adaptive AI opponent across 3 selectable difficulty levels (Beginner, Intermediate, Advanced).
-- **Local Duel:** Two players on the same screen with independent resource pools and decision histories.
-- **Hackathon Demo Mode:** A curated 60-second experience designed for judges and rapid reviews. Launches instantly into an active board position where a decision review occurs on move 1.
-- **Interactive Tutorial:** A step-by-step guided simulator that teaches piece values, probabilities, risk meters, and operational impact through gameplay rather than walls of text.
-- **Practice Mode:** A relaxed environment to test tactical bets and risk profiling without competitive records.
-
----
-
-## 4. Risk Calculation Methodology
-
-Every decision review is dynamically evaluated by the risk engine:
-1. **Material Equity Ratio:** Comparing the value of the attacking piece against the target piece.
-2. **Position Defense Multiplier:** Evaluating square attack vectors to determine whether the destination square is defended by friendly pieces or attacked by opponent counter-attackers.
-3. **Survival Probability ($P_s$):**
-   - Uncontested square: $95\%$
-   - Equal trade or trading down: $40\%$
-   - Sacrificing higher-value piece into counterplay: $20\%$
-4. **Risk Score ($0 - 100$):**
-   - **Low Risk ($\le 33$):** Highly defended, secure capture. Produces modest operational upside.
-   - **Medium Risk ($34 - 66$):** Contested square with possible counterplay. Produces balanced upside and exposure.
-   - **High Risk ($\ge 67$):** Dangerous tactical sacrifice or deep infiltration. Produces high upside but can cause a significant resource write-down.
+| Mode | Bharat Name | Description |
+|---|---|---|
+| Classic vs AI | **Yuddha** | Single combat against an adaptive AI (Senapati / Maharathi / Chakravartin difficulty) |
+| Local Duel | **Sabha** | Two commanders, same screen, independent treasuries |
+| Judge Showcase | **Rajdarbar** | 60-second curated demo for SIH judges — launches instantly into an active position |
+| Tutorial | **Gurukul** | Step-by-step guided walkthrough of all mechanics |
+| Practice | **Abhyas** | Low-stakes training ground |
 
 ---
 
-## 5. Decision Profiling
+## 5. Risk Calculation Methodology
 
-At the conclusion of matches, Risk Chess analyzes the player's lifetime risk decisions and categorizes their behavioral archetype:
-- **Calculated Risk Taker:** Balances probability and expected value; takes medium-risk positions while protecting reserves.
-- **Conservative Strategist:** Prioritizes piece preservation and steady low-risk assignments; rarely overextends.
-- **Aggressive Opportunist:** High risk appetite; willing to commit significant resources to speculative sacrifices.
-- **Adaptive Player:** Dynamically shifts risk posture depending on whether the game is equal, winning, or behind.
+Every decision review is evaluated by the risk engine:
+
+1. **Material Equity Ratio:** Value of attacker vs. value of target
+2. **Position Defence Multiplier:** Square attack vectors — is the destination defended or contested?
+3. **Survival Probability:**
+   - Uncontested square: **95%**
+   - Equal trade / trading down: **40%**
+   - Sacrificing higher-value piece: **20%**
+4. **Risk Score (0–100):**
+   - **Low Risk (≤ 33):** Secure capture — modest treasury upside
+   - **Medium Risk (34–66):** Contested — balanced upside and exposure
+   - **High Risk (≥ 67):** Dangerous sacrifice — high upside, heavy write-down risk
 
 ---
 
-## 6. Architecture & Technology Stack
+## 6. Rajniti Shaili — Decision Profiling
+
+At the end of each campaign, your decision archetype is derived:
+
+| Profile | Description |
+|---|---|
+| **Calculated Risk Taker** | Balances probability and expected value; takes medium-risk positions |
+| **Conservative Strategist** | Prioritises piece preservation and steady low-risk campaigns |
+| **Aggressive Opportunist** | High risk appetite; commits significant treasury to speculative strikes |
+| **Adaptive Commander** | Dynamically shifts risk posture based on game state |
+
+---
+
+## 7. Architecture & Technology Stack
 
 | Layer | Choice | Rationale |
 |---|---|---|
-| **Framework** | **React 19 + TypeScript** | Strict type safety, clean component composition |
-| **Bundler** | **Vite 8** | Near-instant HMR, tree-shaking, fast builds |
-| **Chess Rules** | **chess.js** | Production-tested validation for castling, en passant, promotion, and checkmate |
-| **AI Worker** | **Web Worker (UCI Engine)** | Runs off-thread chess computation, keeping 60 FPS UI responsiveness |
-| **State Management** | **Zustand** | Lightweight, reactive state without Redux boilerplate |
-| **Audio** | **Web Audio API Synthesis** | 100% offline, zero-asset latency audio synthesis for moves, captures, and resource decisions |
-| **Styling** | **Vanilla CSS + Design Tokens** | Handcrafted palette; no generic Tailwind SaaS templates |
-| **Offline / PWA** | **vite-plugin-pwa (Workbox)** | Full offline capability, manifest, service worker |
-| **Container** | **Docker + Nginx Alpine** | Reproducible production deployment |
+| **Framework** | React 19 + TypeScript | Strict type safety, clean component composition |
+| **Bundler** | Vite 8 | Near-instant HMR, tree-shaking, fast builds |
+| **Chess Rules** | chess.js | Production-tested: castling, en passant, promotion, checkmate |
+| **AI Engine** | Web Worker (UCI/Stockfish) | Off-thread computation — keeps 60 FPS UI responsiveness |
+| **State** | Zustand | Lightweight reactive state without Redux boilerplate |
+| **Audio** | Web Audio API Synthesis | 100% offline, zero-asset audio for moves, captures, and decisions |
+| **Styling** | Vanilla CSS + Design Tokens | Cinzel headings, handcrafted dark palette, no generic Tailwind |
+| **PWA** | vite-plugin-pwa (Workbox) | Full offline capability, manifest, service worker |
+| **Container** | Docker + Nginx Alpine | Reproducible production deployment |
 
 ---
 
-## 7. Getting Started Locally
+## 8. Getting Started Locally
 
 ### Prerequisites
 - Node.js 18+ (Node 20+ recommended)
-- npm or pnpm
+- npm
 
 ### Installation
 ```bash
-# 1. Navigate to the project directory
+# Navigate to the project directory
 cd risk-chess
 
-# 2. Install dependencies
+# Install dependencies
 npm install --legacy-peer-deps
 
-# 3. Start local development server
+# Start local development server
 npm run dev
 ```
 
-The application will be accessible at `http://localhost:3000` (or the port specified by Vite).
+Open **http://localhost:5173** in your browser.
 
-### Running Automated Tests
+### Running Tests
 ```bash
 npm run test
 # or
@@ -139,34 +156,38 @@ npm run preview
 
 ---
 
-## 8. Running with Docker
-
-You can run the entire application using Docker:
+## 9. Running with Docker
 
 ```bash
-# Build and run the container
+# Build and run
 docker compose up --build
 ```
 
-Access the application in your browser at `http://localhost:3000`.
-
-To stop the container:
+Open **http://localhost:3000**. To stop:
 ```bash
 docker compose down
 ```
 
 ---
 
-## 9. Design Philosophy & Anti-AI-Slop
+## 10. Bharat Codex — Cultural Design Philosophy
 
-Risk Chess was built with strict human-centric design rules:
-- **No generic Tailwind SaaS layouts:** Handcrafted tokens using warm dark charcoal (`#171615`), warm parchment light squares (`#d4c4a0`), walnut dark squares (`#7a6a4a`), and muted gold accents (`#c9a84c`).
-- **No casino visuals or slot sounds:** Risk is presented through clear data, probability distributions, and subtle tactile audio tones.
-- **The Chessboard is King:** The board dominates desktop and mobile viewports; strategy panels and controls support the board rather than cluttering it.
-- **Responsive Architecture:** On mobile screens, the investment panel converts into a fluid bottom sheet with one-tap access.
+This game was designed to feel **authentically Indian without being stereotypically decorated**:
+
+- **Piece names are Sanskrit titles** — not decorative labels but meaningful roles from Indian military tradition (*Padati* = infantry soldier, *Ashva* = warhorse, *Acharya* = teacher/sage)
+- **Chanakya's Arthashastra** is the philosophical backbone: every treasury decision is framed as an act of statecraft
+- **Cinzel typeface** for headings — classical monumental typography that echoes stone inscriptions
+- **Warm dark palette** — `#10110f` charcoal background with `#d7b46a` gold accents; restrained, not garish
+- **No casino aesthetics:** Risk is communicated through probability data and decision intelligence, not flashing animations
 
 ---
 
-## 10. License
+## 11. Team
 
-MIT License. Educational and strategic game simulation.
+Submitted for **SIH26208** — Smart India Hackathon 2026.
+
+---
+
+## 12. License
+
+MIT License. Educational and strategic game simulation. No real currency involved.
