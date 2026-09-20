@@ -11,25 +11,29 @@ interface SetupScreenProps {
   onBack: () => void;
 }
 
-// Bharat Codex Scenarios — cosmetic framing for SIH26208
+// Bharat Codex scenarios. Each campaign now changes the starting treasury so
+// the choice affects strategy rather than being purely cosmetic.
 const SCENARIOS = [
   {
     id: 'trade_route',
     title: 'The Grand Trade Route',
     subtitle: 'Silk & Spice',
-    desc: 'Commerce flows across the board. High-value captures are tactically rewarded.',
+    desc: 'Begin with 12,000 TR. More capital enables bold, high-value capture investments.',
+    startingCapital: 12_000,
   },
   {
     id: 'monsoon',
     title: 'The Monsoon',
     subtitle: 'Season of Uncertainty',
-    desc: 'Volatile conditions. Risk profiles shift with each campaign decision.',
+    desc: 'Begin with 8,000 TR. Scarce reserves make every investment and capture more dangerous.',
+    startingCapital: 8_000,
   },
   {
     id: 'nalanda',
     title: 'The Centre of Knowledge',
     subtitle: 'Nalanda Principles',
-    desc: 'Defensive mastery is rewarded. Protect your pieces, strengthen your treasury.',
+    desc: 'Begin with 10,000 TR. A balanced treasury rewards careful defensive play.',
+    startingCapital: STARTING_CAPITAL,
   },
 ] as const;
 
@@ -54,13 +58,14 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ mode, onStart, onBack 
   const handleStart = () => {
     const trimmedPlayer = playerName.trim();
     const trimmedOpponent = opponentName.trim();
+    const selectedScenario = SCENARIOS.find((item) => item.id === scenario) ?? SCENARIOS[0];
     const config: GameConfig = {
       mode,
       difficulty,
       playerColor,
       playerName: trimmedPlayer || playerProfile?.name || 'Commander',
       opponentName: mode === 'local' ? (trimmedOpponent || 'Rival Commander') : 'AI Chakravartin',
-      startingCapital: STARTING_CAPITAL,
+      startingCapital: selectedScenario.startingCapital,
     };
     onStart(config);
   };
