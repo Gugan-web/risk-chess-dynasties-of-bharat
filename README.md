@@ -23,7 +23,7 @@ There is **no real money, no wagering, no loot boxes, and no pay-to-win mechanic
 
 ## 2. Sena Parichaya — The Royal Forces
 
-Both players begin with **10,000 TR** (Treasury Reserves).
+Both players begin with **10,000 TR** (Treasury Reserves) by default, unless a campaign scenario modifies the starting treasury.
 
 | Piece (Bharat) | Piece (Standard) | Treasury Value | Role |
 |---|---|---|---|
@@ -53,13 +53,13 @@ When you execute a tactically meaningful strike, a **Strategic Decision Review**
 
 ### Campaign Scenarios
 
-Choose your historical campaign context at setup:
+Choose your historical campaign context at setup. Each scenario changes the starting treasury and strategic pressure in a different way:
 
-| Scenario | Theme | Effect |
-|---|---|---|
-| **The Grand Trade Route** | Silk & Spice commerce | High-value captures reward tactical boldness |
-| **The Monsoon** | Season of uncertainty | Risk profiles shift with volatile conditions |
-| **The Centre of Knowledge** | Nalanda Principles | Defensive mastery builds steady treasury yield |
+| Scenario | Theme | Starting Treasury | Strategic Effect |
+|---|---|---:|---|
+| **The Grand Trade Route** | Silk & Spice commerce | **12,000 TR** | High-value captures and aggressive expansion are rewarded by the larger treasury |
+| **The Monsoon** | Season of uncertainty | **8,000 TR** | Scarce reserves make every move more dangerous and risk-aware |
+| **The Centre of Knowledge** | Nalanda Principles | **10,000 TR** | Balanced campaign that rewards measured defence and steady treasury growth |
 
 ---
 
