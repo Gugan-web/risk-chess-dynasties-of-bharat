@@ -1,0 +1,151 @@
+/* ─── Responsive Adjustments ─── */
+
+/* Tablet & Smaller Desktop (under 1024px) */
+@media (max-width: 1024px) {
+  .game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .investment-panel {
+    width: 100%;
+    max-width: min(78vh, 720px);
+    min-width: 0;
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+    padding: var(--space-4);
+    box-shadow: none;
+  }
+
+  .game-main {
+    padding: var(--space-3);
+  }
+
+  .home-content {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    gap: var(--space-8);
+  }
+
+  .home-logo,
+  .home-title,
+  .home-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .home-screen {
+    padding: var(--space-4);
+    justify-content: flex-start;
+    padding-top: var(--space-10);
+  }
+
+  .home-title {
+    font-size: var(--text-3xl);
+  }
+
+  .home-subtitle {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-6);
+  }
+
+  .game-main {
+    padding: var(--space-2);
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: var(--space-10);
+  }
+
+  .board-container {
+    max-width: calc(100vw - 16px);
+    padding: 5px;
+  }
+
+  .chessboard {
+    max-width: calc(100vw - 16px);
+    border-width: 1.5px;
+  }
+
+  .game-header,
+  .game-footer,
+  .move-history {
+    max-width: calc(100vw - 16px);
+  }
+
+  .game-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    align-items: stretch;
+  }
+
+  .game-player-info {
+    justify-content: space-between;
+    min-width: 0;
+  }
+
+  .turn-indicator {
+    text-align: center;
+  }
+
+  .game-footer {
+    gap: var(--space-2);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .game-controls {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .investment-panel {
+    display: none; /* Replaced by bottom sheet on mobile */
+  }
+
+  #mobile-capital-btn {
+    display: block !important;
+  }
+
+  .game-over-content {
+    padding: var(--space-2);
+  }
+
+  .game-over-result {
+    font-size: var(--text-2xl);
+  }
+
+  .game-over-final-amount {
+    font-size: var(--text-2xl);
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .name-content,
+  .setup-content,
+  .profile-content,
+  .game-over-content {
+    padding: var(--space-5);
+    width: 100%;
+  }
+
+  .settings-bar {
+    padding: var(--space-2);
+  }
+}
+
+/* Accessibility: High contrast & Reduced motion */
+@media (prefers-contrast: more) {
+  :root {
+    --border-subtle: rgba(255, 255, 255, 0.25);
+    --border-medium: rgba(255, 255, 255, 0.4);
+    --border-strong: rgba(255, 255, 255, 0.6);
+  }
+}

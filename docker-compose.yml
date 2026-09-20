@@ -1,0 +1,11 @@
+services:
+  risk-chess:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: risk-chess
+    ports:
+      - "${PORT:-3000}:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production

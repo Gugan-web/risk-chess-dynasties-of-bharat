@@ -1,0 +1,382 @@
+/* ─── Investment Panel (Desktop sidebar) ─── */
+.investment-panel {
+  background:
+    linear-gradient(180deg, rgba(109, 170, 160, 0.06), transparent 260px),
+    var(--surface-raised);
+  border-left: 1px solid var(--border-subtle);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  overflow-y: auto;
+  min-width: 320px;
+  max-width: 348px;
+  box-shadow: -18px 0 50px rgba(0, 0, 0, 0.16);
+}
+
+/* ─── Capital Display ─── */
+.capital-display {
+  padding: var(--space-4);
+  background: rgba(19, 22, 18, 0.84);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.capital-display--active {
+  border-color: rgba(109, 170, 160, 0.42);
+  background: linear-gradient(180deg, rgba(109, 170, 160, 0.12), rgba(19, 22, 18, 0.92));
+}
+
+.capital-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-1);
+}
+
+.capital-amount {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.capital-breakdown {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.capital-breakdown-item {
+  flex: 1;
+}
+
+.capital-breakdown-label {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.capital-breakdown-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* ─── Risk Opportunity Card ─── */
+.risk-opportunity {
+  background:
+    linear-gradient(180deg, rgba(215, 180, 106, 0.08), transparent 120px),
+    var(--surface-muted);
+  border: 1px solid rgba(215, 180, 106, 0.34);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  animation: slideUp 250ms ease;
+  box-shadow: var(--shadow-md);
+}
+
+.risk-opportunity-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.risk-opportunity-badge {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-inverse);
+  background: var(--color-accent);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.risk-opportunity-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.risk-opportunity-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-4);
+}
+
+.risk-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+  padding: var(--space-3);
+  background: rgba(16, 17, 15, 0.45);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.risk-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-sm);
+  min-height: 28px;
+  gap: var(--space-3);
+}
+
+.risk-stat-label {
+  color: var(--text-secondary);
+}
+
+.risk-stat-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  text-align: right;
+}
+
+/* ─── Risk Meter ─── */
+.risk-meter {
+  height: 8px;
+  background: rgba(16, 17, 15, 0.82);
+  border-radius: 99px;
+  overflow: hidden;
+  margin: var(--space-3) 0;
+  border: 1px solid rgba(243, 240, 232, 0.06);
+}
+
+.risk-meter-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width var(--transition-slow);
+}
+
+.risk-meter-fill--low {
+  background: linear-gradient(90deg, var(--color-success), #9abe78);
+}
+
+.risk-meter-fill--medium {
+  background: linear-gradient(90deg, var(--color-accent), var(--color-cyan));
+}
+
+.risk-meter-fill--high {
+  background: linear-gradient(90deg, var(--color-warning), var(--color-danger));
+}
+
+.risk-level-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--space-1);
+}
+
+/* ─── Investment Buttons ─── */
+.invest-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.invest-amounts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.invest-amount-btn {
+  min-height: 38px;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  background: rgba(243, 240, 232, 0.04);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.invest-amount-btn:hover:not(:disabled) {
+  background: var(--color-accent-glow);
+  border-color: rgba(215, 180, 106, 0.55);
+}
+
+.invest-amount-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.invest-amount-btn--selected {
+  background: var(--color-accent);
+  color: var(--text-inverse);
+  border-color: var(--color-accent);
+  font-weight: 600;
+}
+
+.invest-confirm-row {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.risk-breakdown-card {
+  margin-top: var(--space-1);
+  padding: var(--space-3);
+  background: rgba(16, 17, 15, 0.65);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.risk-breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.risk-breakdown-val {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-align: right;
+}
+
+.btn-invest {
+  flex: 1;
+  padding: var(--space-3);
+  background: var(--color-accent);
+  color: var(--text-inverse);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.btn-invest:hover {
+  background: #e2c176;
+}
+
+.btn-skip {
+  padding: var(--space-3) var(--space-4);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-skip:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+/* ─── Investment Result Toast ─── */
+.investment-result {
+  position: fixed;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  z-index: var(--z-toast);
+  animation: toastIn 300ms ease, toastOut 300ms ease 3700ms forwards;
+  box-shadow: var(--shadow-lg);
+  max-width: min(420px, calc(100vw - 32px));
+  text-align: center;
+}
+
+.investment-result--success {
+  background: #203b26;
+  color: var(--text-primary);
+  border: 1px solid rgba(114, 167, 117, 0.5);
+}
+
+.investment-result--failure {
+  background: #462421;
+  color: var(--text-primary);
+  border: 1px solid rgba(196, 111, 101, 0.5);
+}
+
+.investment-result-amount {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.investment-result-desc {
+  opacity: 0.9;
+}
+
+/* ─── Active Investments List ─── */
+.active-investments {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.active-investment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  background: rgba(19, 22, 18, 0.74);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+}
+
+.active-investment-piece {
+  color: var(--text-primary);
+}
+
+.active-investment-amount {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+}
+
+/* ─── Section Headers ─── */
+.panel-section-header {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+/* ─── Disclaimer ─── */
+.virtual-currency-notice {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: var(--space-2) var(--space-3);
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(16, 17, 15, 0.56);
+  border-radius: var(--radius-sm);
+}
